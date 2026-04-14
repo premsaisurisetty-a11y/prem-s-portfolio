@@ -52,6 +52,7 @@ const themes: Record<HeroMode, ProjectTheme> = {
       { title: "Projects",   subtitle: "WEB WORK",  url: "/projects" },
       { title: "Achievements", subtitle: "TROPHIES", url: "/achievements" },
       { title: "Skills",     subtitle: "POWERS",    url: "#skills" },
+      { title: "Services",   subtitle: "SOLUTIONS", url: "#services" },
       { title: "Contact",    subtitle: "SIGNAL",    url: "#contact" },
     ],
   },
@@ -193,7 +194,7 @@ function ProjectMenuItem({ item, index, theme, mode }: { item: MenuItem, index: 
       <div className="flex items-center justify-between pr-2" style={{ transform: "translateZ(20px)" }}>
         <div>
           <p className="text-xs font-mono tracking-[0.35em] uppercase mb-1" style={{ color: theme.accentColor }}>
-            {item.subtitle}
+            {String(index + 1).padStart(2, "0")} <span className="opacity-40">/</span> {item.subtitle}
           </p>
           <h3 className="text-xl font-bold text-white tracking-tight">{item.title}</h3>
         </div>

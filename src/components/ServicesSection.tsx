@@ -95,7 +95,7 @@ export default function ServicesSection({ mode }: Props) {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="mb-16">
           <p className="font-mono text-xs tracking-[0.4em] uppercase mb-4" style={{ color: theme.accent }}>
-            SOLUTIONS
+            05 // SOLUTIONS
           </p>
           <h2 className="text-5xl md:text-6xl font-black text-white tracking-tighter uppercase italic leading-none"
             style={{ textShadow: "2px 2px 12px rgba(0,0,0,0.95)" }}>

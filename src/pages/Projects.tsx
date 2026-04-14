@@ -156,7 +156,7 @@ export default function Projects() {
           </button>
           <div className="hidden md:flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse ring-4 ring-green-500/20" />
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase opacity-40">System Online</span>
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase opacity-40">System Online // Case: SHOWCASE_ALPHA</span>
           </div>
         </div>
       </nav>
@@ -193,6 +193,7 @@ export default function Projects() {
               <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
                    <div className={`w-12 h-[1px] ${getAccentColor(mode).bg}`} />
+                   <span className={`font-mono text-xs tracking-[0.4em] uppercase ${getAccentColor(mode).text}`}>Project {idx + 1}</span>
                 </div>
                 <h2 className="text-4xl md:text-5xl font-black mb-2 tracking-tight italic uppercase">{project.title}</h2>
                 <h3 className="text-xl text-white/60 font-light mb-8 italic tracking-wide">{project.tagline}</h3>
@@ -232,7 +233,7 @@ export default function Projects() {
       {/* Footer */}
       <footer className="py-20 border-t border-white/5 bg-black/40">
         <div className="container mx-auto px-8 text-center text-white/20 font-mono text-xs tracking-[0.4em] uppercase">
-          Transmission Terminal // Established 2026
+          Transmission Terminal // Established 2026 // Built for High-Performance
         </div>
       </footer>
     </div>

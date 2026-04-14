@@ -76,6 +76,7 @@ export default function Index() {
         <AboutSection mode={mode} />
         <ProjectsSection mode={mode} />
         <SkillsSection mode={mode} />
+        <ServicesSection mode={mode} />
         <ContactSection mode={mode} />
       </main>
 
