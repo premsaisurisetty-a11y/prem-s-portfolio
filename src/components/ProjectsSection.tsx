@@ -52,7 +52,6 @@ const themes: Record<HeroMode, ProjectTheme> = {
       { title: "Projects",   subtitle: "WEB WORK",  url: "/projects" },
       { title: "Achievements", subtitle: "TROPHIES", url: "/achievements" },
       { title: "Skills",     subtitle: "POWERS",    url: "#skills" },
-      { title: "Services",   subtitle: "SOLUTIONS", url: "#services" },
       { title: "Contact",    subtitle: "SIGNAL",    url: "#contact" },
     ],
   },
