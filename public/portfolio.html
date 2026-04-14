@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prem Sai Surisetti — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <script>
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const mode = urlParams.get('mode') || localStorage.getItem('hero-mode') || 'spidey';
+      
+      const themeMap = {
+        'spidey':   '#ff2d2d',
+        'ironman':  '#ff2200',
+        'deadpool': '#dc1414',
+        'batman':   '#fdc700',
+        'superman': '#4488ff'
+      };
+
+      const accent = themeMap[mode] || themeMap['spidey'];
+      document.documentElement.style.setProperty('--accent', accent);
+      // Save for persistence across visits
+      localStorage.setItem('hero-mode', mode);
+    })();
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #ff2d2d; /* Default Spidey Red */
+      --dark: #0a0a0a;
+      --mid: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #f0f0f0;
+      --muted: #888;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #111;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      background: #0a0a0a;
+      color: #fff;
+      padding: 12px 30px 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(230,57,70,0.25) 0%, transparent 70%);
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .name {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+    .name span { color: var(--accent); }
+    .header-img {
+      width: 75px; height: 75px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 15px rgba(255,45,45,0.2);
+    }
+    .role {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #888;
+      margin-top: 10px;
+    }
+    .contact-block {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #aaa;
+      line-height: 2;
+    }
+    .contact-block a { color: var(--accent); text-decoration: none; }
+    .header-bar {
+      margin-top: 28px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent) 0%, #444 60%, transparent 100%);
+    }
+
+    /* ─── BODY ─── */
+    .body {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+    }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar {
+      background: #f5f5f5;
+      padding: 15px 12px;
+      border-right: 1px solid #e0e0e0;
+    }
+    .sidebar-section { margin-bottom: 6px; }
+    .sidebar-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .skill-item {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #222;
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .skill-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .edu-uni {
+      font-size: 12px;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.4;
+    }
+    .edu-degree {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #555;
+      margin-top: 4px;
+    }
+    .edu-cgpa {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 6px;
+    }
+    .edu-courses {
+      font-size: 10px;
+      color: #666;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+    .focus-item {
+      font-size: 12px;
+      color: #333;
+      padding: 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .focus-item::before {
+      content: '▸';
+      color: var(--accent);
+      font-size: 10px;
+    }
+
+    /* ─── MAIN ─── */
+    .main { padding: 15px 25px; }
+    .section { margin-bottom: 8px; }
+    .section-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .bio {
+      font-size: 11.5px;
+      line-height: 1.35;
+      color: #333;
+    }
+    .bio strong { color: #111; }
+
+    /* Journey items */
+    .timeline { position: relative; padding-left: 20px; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 4px; top: 4px; bottom: 4px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 14px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -17px; top: 5px;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .timeline-text {
+      font-size: 12.5px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Projects */
+    .project-card {
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      padding: 6px 10px;
+      margin-bottom: 4px;
+      background: #fafafa;
+      page-break-inside: avoid;
+    }
+    .project-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111;
+    }
+    .project-subtitle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--accent);
+      margin-top: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .project-desc {
+      font-size: 12px;
+      color: #555;
+      margin-top: 8px;
+      line-height: 1.65;
+    }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: #111;
+      color: #fff;
+    }
+
+    /* Achievements */
+    .achievement-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 3px;
+      page-break-inside: avoid;
+    }
+    .achievement-icon {
+      width: 16px; height: 16px;
+      border-radius: 3px;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+    .achievement-title { font-size: 11.5px; font-weight: 600; color: #111; }
+    .achievement-desc { font-size: 10px; color: #666; margin-top: 0px; }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      background: #0a0a0a;
+      color: #555;
+      text-align: center;
+      padding: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .footer span { color: var(--accent); }
+
+    /* ─── PRINT ─── */
+    @media print {
+      @page { size: A4; margin: 0; }
+      body { zoom: 0.85; max-width: 100%; height: 297mm; overflow: hidden; }
+      .no-print { display: none; }
+      .body { grid-template-columns: 160px 1fr; }
+      .header { padding: 8px 15px; }
+      .name { font-size: 20px; }
+      .main { padding: 5px 12px; }
+      .sidebar { padding: 5px; }
+      .footer { padding: 3px; font-size: 7px; }
+    }
+
+    /* ─── DOWNLOAD BTN ─── */
+    .download-bar {
+      background: #111;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+    .btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: #888;
+      border: 1px solid #333;
+    }
+    .btn:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar (hidden on print) -->
+  <div class="download-bar no-print">
+    <button class="btn btn-secondary" onclick="window.close()">✕ Close</button>
+    <button class="btn btn-primary" onclick="window.print()">⬇ Save as PDF</button>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div style="display:flex; align-items:center; gap:24px;">
+        <img src="portfolio-image.png" alt="Prem Sai Surisetti" class="header-img" />
+        <div>
+          <div class="name">PREM SAI<br/><span>SURISETTI</span></div>
+          <div class="role">Full Stack Developer</div>
+        </div>
+      </div>
+    </div>
+    <div class="header-bar"></div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Education</div>
+        <div class="edu-uni">KL UNIVERSITY<br/>HYDERABAD</div>
+        <div class="edu-degree">B.Tech in Computer Science</div>
+        <div class="edu-cgpa">CGPA: 9.58</div>
+        <div class="edu-courses">
+          <strong style="font-size:10px; color:#444;">Relevant Coursework</strong><br/>
+          Data Structures &amp; Algorithms<br/>
+          Web Development<br/>
+          OOP — Java
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Skills</div>
+        <div class="skill-item">Java Programming</div>
+        <div class="skill-item">HTML</div>
+        <div class="skill-item">CSS</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">React.js</div>
+        <div class="skill-item">Node.js</div>
+        <div class="skill-item">UI &amp; UX Design</div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Current Focus</div>
+        <div class="focus-item">Full Stack Development</div>
+        <div class="focus-item">Problem Solving (DSA)</div>
+        <div class="focus-item">Real-world Projects</div>
+        <div class="focus-item">Internship Preparation</div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Certifications</div>
+        <div class="skill-item">JavaScript Essentials 1</div>
+        <div class="skill-item">CSS Essentials</div>
+        <div class="skill-item">HTML Essentials</div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Contact</div>
+        <div style="font-size:12px; color:#333; line-height:2;">
+          <div style="display:flex; align-items:center; gap:7px;">
+            <span style="color:var(--accent);">✉</span>
+            <a href="mailto:premsaisurisetty@gmail.com" style="color:#111; text-decoration:none; font-size:9.5px; word-break:break-all;">premsaisurisetty@gmail.com</a>
+          </div>
+          <div style="display:flex; align-items:center; gap:7px; margin-top:4px;">
+            <span style="color:var(--accent);">☎</span>
+            <span style="font-size:12px; font-weight:600;">+91 8328168976</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+      <div class="section">
+        <div class="section-title">About Me</div>
+        <p class="bio">
+          I am a <strong>Full Stack Developer</strong> weaving together logic and scale. In a world where digital experiences are the new frontier, I specialize in architecting high-performance web applications. From the initial thread of a frontend concept to the robust web of a backend infrastructure, my mission is to deliver seamless, scalable solutions.
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Technical Journey</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-text">Started learning programming with <strong>Java</strong>, building strong fundamentals in OOP.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-text">Developed a strong foundation in <strong>Data Structures &amp; Algorithms</strong>.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-text">Built multiple full-stack applications using <strong>React &amp; Node.js</strong>.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-text">Continuously improving problem-solving and <strong>system design</strong> skills.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Projects</div>
+
+        <div class="project-card">
+          <div class="project-title">Learn 2 Code</div>
+          <div class="project-subtitle">Educational Platform</div>
+          <div class="project-desc">A high-performance interactive platform for mastering algorithms and data structures with real-time feedback and gamified skill progression roadmaps.</div>
+          <div class="tag-row">
+            <span class="tag">React</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">UX Design</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">Cinematic Superhero Portfolio</div>
+          <div class="project-subtitle">Personal Project</div>
+          <div class="project-desc">An immersive, cinematic developer portfolio featuring multi-hero themes (Spider-Man, Iron Man, Batman, Deadpool, Superman) with real-time anamorphic cursor morphing, GSAP animations, and Three.js 3D elements.</div>
+          <div class="tag-row">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">GSAP</span>
+            <span class="tag">Three.js</span>
+            <span class="tag">Tailwind</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">Student Grievance Portal</div>
+          <div class="project-subtitle">Full Stack Application</div>
+          <div class="project-desc">A full-stack grievance management system enabling students to raise, track and resolve complaints with role-based dashboards for students and administrators.</div>
+          <div class="tag-row">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">UserPulse Analytics</div>
+          <div class="project-subtitle">Front-End Project</div>
+          <div class="project-desc">A real-time user behaviour analytics dashboard with dynamic charts, KPI tracking, and dark-mode UI built with modern React patterns.</div>
+          <div class="tag-row">
+            <span class="tag">React</span>
+            <span class="tag">Chart.js</span>
+            <span class="tag">CSS3</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section">
+        <div class="section-title">Achievements</div>
+        <div class="achievement-item">
+          <div class="achievement-icon">🏆</div>
+          <div>
+            <div class="achievement-title">CodeChef 2 Star Coder</div>
+            <div class="achievement-desc">Achieved 2★ rating on CodeChef through competitive programming contests.</div>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon">📜</div>
+          <div>
+            <div class="achievement-title">Cisco NetAcad — JavaScript Essentials 1</div>
+            <div class="achievement-desc">Certified by Cisco Networking Academy for JavaScript fundamentals.</div>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon">📜</div>
+          <div>
+            <div class="achievement-title">Cisco NetAcad — HTML &amp; CSS Essentials</div>
+            <div class="achievement-desc">Certified in HTML and CSS Essentials by Cisco Networking Academy.</div>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon">🌐</div>
+          <div>
+            <div class="achievement-title">EF SET English Certificate</div>
+            <div class="achievement-desc">Standardised English language proficiency certification.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Designed &amp; Built By <span>PREM SAI SURISETTI</span> &nbsp;—&nbsp; © 2026
+  </div>
+
+</body>
+</html>
