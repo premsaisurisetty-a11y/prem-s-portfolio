@@ -156,7 +156,7 @@ export default function Projects() {
           </button>
           <div className="hidden md:flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse ring-4 ring-green-500/20" />
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase opacity-40">System Online // Case: SHOWCASE_ALPHA</span>
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase opacity-40">System Online</span>
           </div>
         </div>
       </nav>
@@ -232,7 +232,7 @@ export default function Projects() {
       {/* Footer */}
       <footer className="py-20 border-t border-white/5 bg-black/40">
         <div className="container mx-auto px-8 text-center text-white/20 font-mono text-xs tracking-[0.4em] uppercase">
-          Transmission Terminal // Established 2026 // Built for High-Performance
+          Transmission Terminal // Established 2026
         </div>
       </footer>
     </div>

@@ -736,10 +736,7 @@ export default function Achievements() {
                 <p className="text-white/80 font-light italic leading-relaxed mb-8 relative z-20 transition-colors group-hover:text-white">
                   {cat.description}
                 </p>
-                <div className="flex items-center gap-2 text-[10px] font-mono tracking-[0.3em] uppercase opacity-60 group-hover:opacity-100 transition-opacity"
-                  style={{ color: t.accent }}>
-                  Open Files <ArrowLeft className="w-3 h-3 rotate-180" />
-                </div>
+
               </button>
             ))}
           </div>
@@ -783,8 +780,7 @@ export default function Achievements() {
                   {/* Content Side */}
                   <div className="flex flex-col justify-center">
                     <div className="flex items-center gap-3 mb-4">
-                       <div className="w-12 h-[1px]" style={{ background: t.accent }} />
-                       <span className="font-mono text-xs tracking-[0.4em] uppercase" style={{ color: t.accent }}>Award {idx + 1}</span>
+                        <div className="w-12 h-[1px]" style={{ background: t.accent }} />
                     </div>
                     <h2 className="text-4xl md:text-6xl font-black mb-2 tracking-tight italic uppercase leading-tight">{ach.title}</h2>
                     <h3 className="text-2xl text-white/60 font-light mb-8 italic tracking-wide">{ach.tagline}</h3>
@@ -814,8 +810,8 @@ export default function Achievements() {
 
       {/* Footer */}
       <footer className="py-24 border-t border-white/5 bg-black/40">
-        <div className="container mx-auto px-8 text-center text-white/20 font-mono text-xs tracking-[0.4em] uppercase">
-          Trophy Room Encryption Enabled // Archive Verified // Heroic Status Confirmed
+        <div className="container mx-auto px-8 text-center text-white/10 font-mono text-[10px] tracking-[0.5em] uppercase">
+          Transmission Terminal // Established 2026
         </div>
       </footer>
     </div>
