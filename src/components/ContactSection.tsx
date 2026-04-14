@@ -41,7 +41,7 @@ const themes: Record<HeroMode, ContactTheme> = {
   spidey: {
     accentColor:    "#ffffff", dimColor: "#ffffff",
     heading:        "Get In", headingAccent: "Touch",
-    subheader:      "06 // SIGNAL",
+    subheader:      "SIGNAL",
     statusText:     "J. JONAH JAMESON COMM CHANNEL — OPEN",
     statusColor:    "#ffffff",
     formBg:         "rgba(0,0,0,0.8)",
@@ -67,7 +67,7 @@ const themes: Record<HeroMode, ContactTheme> = {
   ironman: {
     accentColor:    "#ff2200", dimColor: "#ff4444",
     heading:        "Contact", headingAccent: "Stark Tech",
-    subheader:      "06 // SIGNAL",
+    subheader:      "SIGNAL",
     statusText:     "STARK INDUSTRIES COMM SYSTEM — ONLINE",
     statusColor:    "#ff4444",
     formBg:         "rgba(10,0,0,0.7)",
@@ -93,7 +93,7 @@ const themes: Record<HeroMode, ContactTheme> = {
   deadpool: {
     accentColor:    "#dc1414", dimColor: "#ff4444",
     heading:        "Hire the", headingAccent: "Merc",
-    subheader:      "06 // SIGNAL",
+    subheader:      "SIGNAL",
     statusText:     "DEADPOOL COMMS — SURPRISINGLY SECURE",
     statusColor:    "#ff4444",
     formBg:         "rgba(12,0,0,0.75)",
@@ -119,7 +119,7 @@ const themes: Record<HeroMode, ContactTheme> = {
   batman: {
     accentColor:    "#fdc700", dimColor: "#ffe44d",
     heading:        "Activate the", headingAccent: "Bat-Signal",
-    subheader:      "06 // SIGNAL",
+    subheader:      "SIGNAL",
     statusText:     "BAT-SIGNAL ACTIVE — AWAITING RESPONSE",
     statusColor:    "#fdc700",
     formBg:         "rgba(5,5,12,0.85)",
@@ -145,7 +145,7 @@ const themes: Record<HeroMode, ContactTheme> = {
   superman: {
     accentColor:    "#4488ff", dimColor: "#ffc000",
     heading:        "Fortress of", headingAccent: "Solitude",
-    subheader:      "04 // SIGNAL",
+    subheader:      "SIGNAL",
     statusText:     "FORTRESS OF SOLITUDE — COMMS ACTIVE",
     statusColor:    "#ffc000",
     formBg:         "rgba(2,5,25,0.8)",

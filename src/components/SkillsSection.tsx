@@ -71,7 +71,7 @@ export default function SkillsSection({ mode }: Props) {
         <div className="mb-12 text-center md:text-left">
           <p className="font-mono text-xs tracking-[0.35em] uppercase mb-3" 
             style={{ color: t.dimColor, textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
-            04 // POWERS
+            POWERS
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight" 
             style={{ textShadow: `2px 2px 10px rgba(0,0,0,0.9), ${t.glowShadow}` }}>
@@ -87,7 +87,7 @@ export default function SkillsSection({ mode }: Props) {
                 <div key={s.name} className="skill-card group">
                   <div className="flex items-baseline">
                     <span className="text-sm font-mono tracking-widest text-white uppercase" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.8)" }}>
-                      {String(i + 1).padStart(2, "0")} // {s.name}
+                      {s.name}
                     </span>
                   </div>
                 </div>
