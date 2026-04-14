@@ -71,7 +71,7 @@ export default function AchievementsSection({ mode }: Props) {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="mb-16 text-center md:text-left">
           <p className="font-mono text-xs tracking-[0.4em] uppercase mb-4" style={{ color: t.dim }}>
-            03 // TROPHIES
+            TROPHIES
           </p>
           <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter uppercase italic leading-none"
             style={{ textShadow: "2px 2px 15px rgba(0,0,0,0.9)" }}>
@@ -104,9 +104,7 @@ export default function AchievementsSection({ mode }: Props) {
                 </p>
               </div>
 
-              <div className="absolute top-4 right-4 font-mono text-[10px] opacity-20 group-hover:opacity-60 transition-opacity">
-                #{String(idx + 1).padStart(2, '0')}
-              </div>
+
             </div>
           ))}
         </div>

@@ -193,7 +193,6 @@ export default function Projects() {
               <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
                    <div className={`w-12 h-[1px] ${getAccentColor(mode).bg}`} />
-                   <span className={`font-mono text-xs tracking-[0.4em] uppercase ${getAccentColor(mode).text}`}>Project {idx + 1}</span>
                 </div>
                 <h2 className="text-4xl md:text-5xl font-black mb-2 tracking-tight italic uppercase">{project.title}</h2>
                 <h3 className="text-xl text-white/60 font-light mb-8 italic tracking-wide">{project.tagline}</h3>
