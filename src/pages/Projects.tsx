@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ArrowLeft, ExternalLink, Cpu, Rocket } from "lucide-react";
+import { ArrowLeft, ExternalLink, Cpu } from "lucide-react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { HeroMode } from "./Index";
 import SpideyBackground from "@/components/SpideyBackground";
@@ -223,10 +223,6 @@ export default function Projects() {
                     <span>Visit Live Site</span>
                     <ExternalLink className="w-5 h-5" />
                   </a>
-                  <button className="px-8 py-4 border border-white/10 text-white font-mono tracking-widest text-sm rounded-full flex items-center gap-3 hover:bg-white/5 transition-all duration-300 uppercase italic">
-                    <Rocket className="w-4 h-4" />
-                    <span>Case Study Coming Soon</span>
-                  </button>
                 </div>
               </div>
             </div>
