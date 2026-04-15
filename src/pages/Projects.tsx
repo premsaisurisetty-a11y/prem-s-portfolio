@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ArrowLeft, ExternalLink, Cpu } from "lucide-react";
+import { ArrowLeft, ExternalLink, Cpu, Github } from "lucide-react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { HeroMode } from "./Index";
 import SpideyBackground from "@/components/SpideyBackground";
@@ -15,14 +15,25 @@ const projects = [
     tagline: "Mastering the Algorithmic Frontier",
     image: "/learn2code-bg.png",
     url: "https://learn2code-beige.vercel.app/",
+    github: "https://github.com/premsaisurisetty-a11y/FWD-Project",
     context: "Learn 2 Code is a state-of-the-art interactive platform designed for developers who strive for algorithmic excellence. It provides a gamified experience where users can master complex data structures through real-time feedback, interactive modules, and personalized skill progression roadmaps. Whether you're sharpening your 'Spider-Sense' or training like a 'Kryptonian', this platform bridges the gap between learning and mastery with world-class challenges. Built with a focus on immersive UX and technical precision, it stands as a testament to the power of educational technology in the modern developer ecosystem.",
     features: ["Interactive Algorithmic Visualizer", "Real-time Feedback Engine", "Themed Career Paths", "Advanced DS Mastery Modules"],
+  },
+  {
+    title: "Study Share",
+    tagline: "Community-Driven Collaborative Learning Platform",
+    image: "/studyshare-bg.png",
+    url: "https://usestudyshare.vercel.app/",
+    github: "https://github.com/premsaisurisetty-a11y/Study-share",
+    context: "Study Share is a community-driven platform where students can share and discover quality study notes, PDFs, and materials. It fosters a collaborative learning environment, allowing students to contribute resources and access peer-shared materials to 'Ace Together.' It's the 'Professor X' of collaborative learning, connecting minds for collective mastery.",
+    features: ["Peer-to-Peer Note Sharing", "Centralized PDF Repository", "Collaborative Study Groups", "Search & Discovery Engine"],
   },
   {
     title: "User Pulse",
     tagline: "Predictive Intelligence for Enterprise Retail",
     image: "/userpulse-bg.png",
     url: "https://user-pulse-kohl.vercel.app/",
+    github: "https://github.com/premsaisurisetty-a11y/UserPulse",
     context: "User Pulse is an enterprise-grade AI intelligence system focused on predictive customer behavior. Utilizing advanced deep learning models, it analyzes high-volume store data to detect subtle patterns indicating customer churn. Once identified, it automatically triggers re-engagement protocols with tailored offers, effectively 'neutralizing' exit risks. It's the ultimate predictive tool for e-commerce, offering a data-driven 'sixth sense' for business growth. By bridging the gap between raw data and actionable insights, User Pulse empowers retailers to maintain a high-frequency pulse on their customer base and maximize long-term retention.",
     features: ["Neural Churn Prediction", "Automated Re-engagement API", "Real-time Analytics Dashboard", "Enterprise Data Integration"],
   },
@@ -31,6 +42,7 @@ const projects = [
     tagline: "Next-Gen AI Credential Authentication",
     image: "/certverify-bg.png",
     url: "https://sage-pixie-86613e.netlify.app/",
+    github: "https://github.com/premsaisurisetty-a11y/Certificate-Validator",
     context: "CertVerify GenAI is a high-precision authentication layer designed for the next generation of digital credentials. Leveraging advanced generative intelligence, it automates the creation and verification of secure certificates with cryptographic certainty. It's the 'Iron Man' of digital trust, ensuring every achievement is backed by AI-driven validation and seamless verification protocols.",
     features: ["AI-Driven Certificate Generation", "Cryptographic Verification", "Real-time Authenticity Check", "Neural PDF Processing"],
   },
@@ -39,6 +51,7 @@ const projects = [
     tagline: "Collaborative Intelligence for Modern Learning",
     image: "/virtualsharing-bg.png",
     url: "https://virtualsharing.netlify.app/",
+    github: "https://github.com/premsaisurisetty-a11y/study-booster",
     context: "Virtual Sharing is a high-performance collaborative platform designed to bridge the gap between shared resources and intelligent learning. Powered by real-time synchronization and GenAI assistance, it enables users to seamlessly exchange knowledge in a secure, decentralized environment. It's the ultimate 'Bat-Computer' for shared intelligence.",
     features: ["Real-time Cloud Sync", "GenAI Content Analysis", "Decentralized Architecture", "Secure Resource Management"],
   },
@@ -47,6 +60,7 @@ const projects = [
     tagline: "Voice for the Scholar Frontier",
     image: "/student-grievance-bg.png",
     url: "https://student-grivence-management.onrender.com/login",
+    github: "https://github.com/premsaisurisetty-a11y",
     context: "Student Grievance Management is a high-transparency platform designed to empower students in navigating institutional challenges. It provides a secure, auditable trail for reporting and tracking grievances, ensuring that every voice is heard and every issue is addressed with Stark-level accountability. It's the ultimate 'Hall of Justice' for the academic ecosystem.",
     features: ["Secure Grievance Tracking", "Automated Workflow Engine", "Transparent Auditing", "Real-time Notifications"],
   }
@@ -218,11 +232,22 @@ export default function Projects() {
                     href={project.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="px-8 py-4 bg-white text-black font-black tracking-widest rounded-full flex items-center gap-3 hover:scale-105 active:scale-95 transition-all duration-300 uppercase"
+                    className="px-8 py-4 bg-white text-black font-black tracking-widest rounded-full flex items-center gap-3 hover:scale-105 active:scale-95 transition-all duration-300 uppercase shrink-0"
                   >
                     <span>Visit Live Site</span>
                     <ExternalLink className="w-5 h-5" />
                   </a>
+                  {project.github && (
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="px-8 py-4 border border-white/20 text-white font-bold tracking-widest rounded-full flex items-center gap-3 hover:bg-white/10 hover:border-white/40 transition-all duration-300 uppercase backdrop-blur-sm shrink-0"
+                    >
+                      <Github className="w-5 h-5" />
+                      <span>Source Code</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

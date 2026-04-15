@@ -188,6 +188,97 @@ function ModeAbout({ mode }: { mode: HeroMode }) {
               </blockquote>
             </div>
 
+            <div className="p-6 rounded-xl space-y-4"
+              style={{ background: t.cardBg, border: `1px solid ${t.cardBorder}`, boxShadow: t.cardShadow, backdropFilter: "blur(25px)" }}>
+               <h3 className="font-mono text-sm tracking-widest uppercase mb-4" style={{ color: t.accentColor }}>Education & Experience</h3>
+               
+               <div className="flex flex-col gap-1 relative pl-4 border-l-2" style={{ borderColor: `${t.accentColor}40` }}>
+                 <div className="absolute w-2 h-2 rounded-full -left-[5px] top-1.5" style={{ background: t.accentColor, boxShadow: `0 0 10px ${t.accentColor}` }} />
+                 <h4 className="text-white font-bold text-lg tracking-wide uppercase italic">KL UNIVERSITY, HYDERABAD</h4>
+                 <p className="text-white/80 text-sm font-mono tracking-widest">B.TECH IN COMPUTER SCIENCE</p>
+                 <p className="text-sm font-mono tracking-widest mt-1" style={{ color: t.accentColor }}>CGPA: 9.58</p>
+               </div>
+
+               <div className="pt-4 mt-4" style={{ borderTop: `1px solid ${t.cardBorder}` }}>
+                 <p className="text-white/70 text-xs leading-relaxed font-mono tracking-wide">
+                   <strong style={{ color: t.accentColor }}>Relevant Coursework:</strong><br />
+                   <span className="mt-1 block">Data Structures • Web Dev • OOP (Java)</span>
+                 </p>
+               </div>
+            </div>
+
+            <div className="p-6 rounded-xl space-y-4"
+              style={{ background: t.cardBg, border: `1px solid ${t.cardBorder}`, boxShadow: t.cardShadow, backdropFilter: "blur(25px)" }}>
+               <h3 className="font-mono text-sm tracking-widest uppercase mb-4" style={{ color: t.accentColor }}>Technical Journey</h3>
+               
+               <ul className="space-y-3">
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Started learning programming with Java</p>
+                 </li>
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Developed strong foundation in Data Structures & Algorithms</p>
+                 </li>
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Built multiple full-stack applications using React & Node.js</p>
+                 </li>
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Continuously improving problem-solving and system design skills</p>
+                 </li>
+               </ul>
+            </div>
+
+            <div className="p-6 rounded-xl space-y-4"
+              style={{ background: t.cardBg, border: `1px solid ${t.cardBorder}`, boxShadow: t.cardShadow, backdropFilter: "blur(25px)" }}>
+               <h3 className="font-mono text-sm tracking-widest uppercase mb-4" style={{ color: t.accentColor }}>Skill Development</h3>
+               
+               <ul className="space-y-3">
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Focused on writing clean and efficient code</p>
+                 </li>
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Practicing DSA regularly on coding platforms</p>
+                 </li>
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Exploring backend development and API design</p>
+                 </li>
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Learning modern frontend frameworks and UI/UX principles</p>
+                 </li>
+               </ul>
+            </div>
+
+            <div className="p-6 rounded-xl space-y-4"
+              style={{ background: t.cardBg, border: `1px solid ${t.cardBorder}`, boxShadow: t.cardShadow, backdropFilter: "blur(25px)" }}>
+               <h3 className="font-mono text-sm tracking-widest uppercase mb-4" style={{ color: t.accentColor }}>Current Focus</h3>
+               
+               <ul className="space-y-3">
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Full Stack Development</p>
+                 </li>
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Problem Solving (DSA)</p>
+                 </li>
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Building real-world projects</p>
+                 </li>
+                 <li className="flex items-start gap-3">
+                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: t.accentColor, boxShadow: `0 0 8px ${t.accentColor}` }} />
+                   <p className="text-white/80 text-sm leading-relaxed font-mono tracking-wide">Preparing for internships and placements</p>
+                 </li>
+               </ul>
+            </div>
+
             </div>
           </div>
         </div>
