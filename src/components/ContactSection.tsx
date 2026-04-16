@@ -319,6 +319,15 @@ function ModeContact({ mode }: { mode: HeroMode }) {
             premsaisurisetty@gmail.com
           </a>
 
+          <a href="https://github.com/premsaisurisetty-a11y/prem-s-portfolio"
+            target="_blank" rel="noopener noreferrer"
+            className="font-mono text-xs tracking-[0.2em] uppercase transition-all duration-500 text-white/50 hover:text-white mb-2"
+            style={{ textShadow: "1px 1px 5px rgba(0,0,0,0.5)" }}
+            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = t.accentColor; (e.currentTarget as HTMLElement).style.textShadow = `0 0 15px ${t.accentColor}`; }}
+            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = ""; (e.currentTarget as HTMLElement).style.textShadow = "1px 1px 5px rgba(0,0,0,0.5)"; }}>
+            [ View Source Code ]
+          </a>
+
           {/* Download Portfolio Button */}
           <a
             href={`/portfolio.html?mode=${mode}`}
