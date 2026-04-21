@@ -109,6 +109,36 @@ const achievementsData = [
         stats: { status: "Verified", platform: "Cisco Netacad", issued: "Jan 23, 2026" }
       },
       {
+        category: "cisco",
+        title: "Analyze Customer Reviews with AI",
+        tagline: "Spider-Sense for Sentiment",
+        icon: Target as any,
+        image: "/analyze customer review-badge.png",
+        context: "Helping people by understanding their needs through AI. Certified in the modern protocols of automated sentiment detection and customer feedback analysis.",
+        features: ["Sentiment Analysis", "Data Processing", "AI Insights", "Customer Feedback"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Modern AI Fundamentals",
+        tagline: "Neural Webbing",
+        icon: Shield as any,
+        image: "/modern ai-badge.png",
+        context: "Mastering the modern AI structures. Certified in the fundamental building blocks of neural networks and the ethical deployment of artificial intelligence.",
+        features: ["Neural Networks", "LLM Integration", "AI Ethics", "Machine Learning"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Update Your Resume with AI",
+        tagline: "Career Web-Slinging",
+        icon: Award as any,
+        image: "/update resume-badge.png",
+        context: "Optimizing my professional identity. Utilizing AI to ensure every career move is as precise as a perfect web-swing across the city.",
+        features: ["AI Resume Tuning", "Career Logistics", "Strategic Branding", "Professional Evolution"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
         category: "codechef_certs",
         title: "HTML Web Foundation",
         tagline: "Certified Markup Specialist",
@@ -211,6 +241,36 @@ const achievementsData = [
         context: "Established the structural integrity required to support advanced Stark-grade digital displays and modular data nodes across the global satellite network.",
         features: ["Structural Systems", "Data Layout", "Core Architecture", "Modular Standards"],
         stats: { status: "Certified", platform: "Cisco Netacad", issued: "Jan 23, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Analyze Customer Reviews with AI",
+        tagline: "Stark-Grade Feedback Analysis",
+        icon: Target as any,
+        image: "/analyze customer review-badge.png",
+        context: "Engineered JARVIS-level sentiment extraction protocols. Certified in the high-fidelity analysis of global customer feedback using advanced Stark AI systems.",
+        features: ["Sentiment Analysis", "Data Processing", "AI Insights", "Customer Feedback"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Modern AI Fundamentals",
+        tagline: "ARC Reactor Logic",
+        icon: Shield as any,
+        image: "/modern ai-badge.png",
+        context: "Powering the next generation of Stark AI. Mastered the core neural architectures and ethical guardrails required for planetary-scale artificial intelligence.",
+        features: ["Neural Networks", "LLM Integration", "AI Ethics", "Machine Learning"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Update Your Resume with AI",
+        tagline: "Executive Identity Calibration",
+        icon: Award as any,
+        image: "/update resume-badge.png",
+        context: "Calibrating professional identity for the future of Stark Industries. Utilizing AI to optimize career trajectories and strategic branding with executive precision.",
+        features: ["AI Resume Tuning", "Career Logistics", "Strategic Branding", "Professional Evolution"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
       },
       {
         category: "codechef_certs",
@@ -317,6 +377,36 @@ const achievementsData = [
         stats: { status: "Certified", platform: "Cisco Netacad", issued: "Jan 23, 2026" }
       },
       {
+        category: "cisco",
+        title: "Analyze Customer Reviews with AI",
+        tagline: "Chimichanga Reviews",
+        icon: Target as any,
+        image: "/analyze customer review-badge.png",
+        context: "Knowing exactly what the fans think of my performance. I used AI to figure out if people like my jokes or if I need to heal more. (Spoiler: They love me).",
+        features: ["Sentiment Analysis", "Data Processing", "AI Insights", "Customer Feedback"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Modern AI Fundamentals",
+        tagline: "AI (Artificial Insanity)",
+        icon: Shield as any,
+        image: "/modern ai-badge.png",
+        context: "Making the voices in my head digital. I learned how AI works so I can finally have a conversation with someone as smart (and crazy) as I am.",
+        features: ["Neural Networks", "LLM Integration", "AI Ethics", "Machine Learning"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Update Your Resume with AI",
+        tagline: "Mercenary Brand Evolution",
+        icon: Award as any,
+        image: "/update resume-badge.png",
+        context: "Making my kill-list look like a resume. AI helped me turn 'Professional Mercenary' into 'Strategic Conflict Resolution Specialist'. Maximum effort!",
+        features: ["AI Resume Tuning", "Career Logistics", "Strategic Branding", "Professional Evolution"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
         category: "codechef_certs",
         title: "Fourth-Wall Markup",
         tagline: "Web Foundation Acrobat",
@@ -421,6 +511,36 @@ const achievementsData = [
         stats: { status: "Certified", platform: "Cisco Netacad", issued: "Jan 23, 2026" }
       },
       {
+        category: "cisco",
+        title: "Analyze Customer Reviews with AI",
+        tagline: "Detective Sentiment Analysis",
+        icon: Target as any,
+        image: "/analyze customer review-badge.png",
+        context: "Uncovering hidden clues in public discourse. Utilizing AI-driven sentiment analysis to trackGotham's pulse and identify emerging threats before they strike.",
+        features: ["Sentiment Analysis", "Data Processing", "AI Insights", "Customer Feedback"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Modern AI Fundamentals",
+        tagline: "Shadow AI Protocols",
+        icon: Shield as any,
+        image: "/modern ai-badge.png",
+        context: "Ethical AI for Gotham's surveillance. Implementing advanced neural architectures that respect the shadows while providing the Bat-Computer with unparalleled foresight.",
+        features: ["Neural Networks", "LLM Integration", "AI Ethics", "Machine Learning"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Update Your Resume with AI",
+        tagline: "Vigilante Logistics",
+        icon: Award as any,
+        image: "/update resume-badge.png",
+        context: "Managing the Wayne Enterprises professional facade. Ensuring my public identity is as meticulously maintained as my vigilante mission through strategic AI optimization.",
+        features: ["AI Resume Tuning", "Career Logistics", "Strategic Branding", "Professional Evolution"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
         category: "codechef_certs",
         title: "Shadow-Web Foundations",
         tagline: "Data Integrity & Structure",
@@ -523,6 +643,36 @@ const achievementsData = [
         context: "Building the foundations of a transparent digital future. Certified in the structural markup that bridges the gap between different cultures and worlds.",
         features: ["Transparent Markup", "Global Foundations", "Humanity Bridge", "Steel Architecture"],
         stats: { status: "Certified", platform: "Cisco Netacad", issued: "Jan 23, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Analyze Customer Reviews with AI",
+        tagline: "Man of Tomorrow Insight",
+        icon: Target as any,
+        image: "/analyze customer review-badge.png",
+        context: "Universal understanding of human feedback. Certified in the AI protocols that help empathy scale across worlds, ensuring every voice is heard and understood with truth.",
+        features: ["Sentiment Analysis", "Data Processing", "AI Insights", "Customer Feedback"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Modern AI Fundamentals",
+        tagline: "Kryptonian Intelligence",
+        icon: Shield as any,
+        image: "/modern ai-badge.png",
+        context: "Advanced cosmic-grade computing. Mastered the fundamental neural structures of modern AI to build a future where technology serves all of humanity with integrity.",
+        features: ["Neural Networks", "LLM Integration", "AI Ethics", "Machine Learning"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
+      },
+      {
+        category: "cisco",
+        title: "Update Your Resume with AI",
+        tagline: "Truth and Career Journalism",
+        icon: Award as any,
+        image: "/update resume-badge.png",
+        context: "Professional excellence at the Daily Planet. Utilizing AI to refine my legacy and ensure my commitment to truth is reflected in every aspect of my professional evolution.",
+        features: ["AI Resume Tuning", "Career Logistics", "Strategic Branding", "Professional Evolution"],
+        stats: { status: "Verified", platform: "Cisco Netacad", issued: "Apr 21, 2026" }
       },
       {
         category: "codechef_certs",
