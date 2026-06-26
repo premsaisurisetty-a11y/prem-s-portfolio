@@ -11,6 +11,24 @@ import SupermanBackground from "@/components/SupermanBackground";
 
 const projects = [
   {
+    title: "NoirKart",
+    tagline: "Premium Curated E-Commerce & Deals Platform",
+    image: "/noirkart-bg.png",
+    url: "https://noir-kart.vercel.app/",
+    github: "https://github.com/premsaisurisetty-a11y/NoirKart",
+    context: "NoirKart is a premium, high-performance curated e-commerce platform designed for exclusive electronics, audio gear, and lifestyle accessories. Built with speed and security in mind, it integrates a real-time cloud database, secure user authentication, and a custom gamified rewards system (NoirCoins) to elevate the shopping experience. Featuring modern glassmorphism aesthetics, fluid micro-interactions, and professional SEO optimization, it delivers a state-of-the-art storefront.",
+    features: ["Curated Premium Deals", "Intelligent Loyalty Rewards (NoirCoins)", "Secure Firebase/Firestore Backend", "Cinematic Dark Mode UI"],
+  },
+  {
+    title: "CanteenBites",
+    tagline: "Real-Time Campus Canteen Pre-Ordering System",
+    image: "/canteenbites-bg.png",
+    url: "https://canteenbites.vercel.app/",
+    github: "https://github.com/premsaisurisetty-a11y/Canteen-PreOrder-System",
+    context: "CanteenBites is a high-efficiency campus canteen pre-ordering system designed to eliminate long queues and streamline meal pickups. Built with React, Vite, and Tailwind CSS, it integrates a real-time Google Firebase Cloud Firestore database for instantaneous order tracking and inventory management. Featuring dual student/admin panels, automated QR ticket generation, and a secure payment gateway integration, it transforms campus dining into a seamless contactless experience.",
+    features: ["Real-Time Firestore Database", "Student & Admin Dashboards", "Automated QR Receipt System", "Contactless Payment Gateway"],
+  },
+  {
     title: "Learn 2 Code",
     tagline: "Mastering the Algorithmic Frontier",
     image: "/learn2code-bg.png",

@@ -28,6 +28,7 @@ type ProjectTheme = {
   imgFilter:     string;
   glowShadow:    string;
   bgSrc:         string;
+  hoverImgSrc:   string;
   menuItems:     MenuItem[];
 };
 
@@ -44,10 +45,11 @@ const themes: Record<HeroMode, ProjectTheme> = {
     hoverBorder:   "rgba(255,45,45,0.7)",
     hoverShadow:   "0 0 25px rgba(255,45,45,0.25)",
     cornerBorder:  "#ff2d2d",
-    imgSrc:        "/spiderman-image.png",
+    imgSrc:        "/personal-image-2.jpeg",
     imgFilter:     "brightness(1.1) contrast(1.1) grayscale(10%)",
     glowShadow:    "0 0 40px rgba(255,45,45,0.4)",
     bgSrc:         "/spiderman-bg.png",
+    hoverImgSrc:   "/personal-image-2.jpeg",
     menuItems: [
       { title: "Projects",   subtitle: "WEB WORK",  url: "/projects" },
       { title: "Achievements", subtitle: "TROPHIES", url: "/achievements" },
@@ -68,10 +70,11 @@ const themes: Record<HeroMode, ProjectTheme> = {
     hoverBorder:   "rgba(255,30,0,0.8)",
     hoverShadow:   "0 0 25px rgba(220,0,0,0.4)",
     cornerBorder:  "#ff2200",
-    imgSrc:        "/ironman-image.png",
+    imgSrc:        "/personal-image-2.jpeg",
     imgFilter:     "sepia(15%) saturate(1.2) brightness(0.9)",
     glowShadow:    "0 0 30px rgba(220,30,0,0.6)",
     bgSrc:         "/ironman-bg.png",
+    hoverImgSrc:   "/personal-image.jpeg",
     menuItems: [
       { title: "Projects",   subtitle: "STARK TECH", url: "/projects" },
       { title: "Achievements", subtitle: "TROPHIES", url: "/achievements" },
@@ -92,10 +95,11 @@ const themes: Record<HeroMode, ProjectTheme> = {
     hoverBorder:   "rgba(220,20,20,0.8)",
     hoverShadow:   "0 0 25px rgba(200,0,0,0.4)",
     cornerBorder:  "#dc1414",
-    imgSrc:        "/deadpool-image.png",
+    imgSrc:        "/personal-image-2.jpeg",
     imgFilter:     "brightness(0.85) contrast(1.1)",
     glowShadow:    "0 0 30px rgba(200,20,0,0.5)",
     bgSrc:         "/deadpool-bg.jpg",
+    hoverImgSrc:   "/personal-image.jpeg",
     menuItems: [
       { title: "Projects",   subtitle: "MAXIMUM EFFORT", url: "/projects" },
       { title: "Achievements", subtitle: "TROPHIES", url: "/achievements" },
@@ -116,10 +120,11 @@ const themes: Record<HeroMode, ProjectTheme> = {
     hoverBorder:   "rgba(220,170,0,0.7)",
     hoverShadow:   "0 0 25px rgba(180,130,0,0.35)",
     cornerBorder:  "#fdc700",
-    imgSrc:        "/batman-image.png",
+    imgSrc:        "/personal-image-2.jpeg",
     imgFilter:     "brightness(0.8) contrast(1.2) grayscale(10%)",
     glowShadow:    "0 0 30px rgba(180,130,0,0.4)",
     bgSrc:         "/batman-bg.jpg",
+    hoverImgSrc:   "/personal-image.jpeg",
     menuItems: [
       { title: "Projects",   subtitle: "BAT-TECH",   url: "/projects" },
       { title: "Achievements", subtitle: "TROPHIES", url: "/achievements" },
@@ -140,10 +145,11 @@ const themes: Record<HeroMode, ProjectTheme> = {
     hoverBorder:   "rgba(80,150,255,0.7)",
     hoverShadow:   "0 0 25px rgba(40,100,220,0.35)",
     cornerBorder:  "#4488ff",
-    imgSrc:        "/superman-image.png",
+    imgSrc:        "/personal-image-2.jpeg",
     imgFilter:     "brightness(0.85) saturate(1.15)",
     glowShadow:    "0 0 30px rgba(50,100,255,0.4)",
     bgSrc:         "/superman-bg.jpg",
+    hoverImgSrc:   "/personal-image.jpeg",
     menuItems: [
       { title: "Projects",   subtitle: "JUSTICE",     url: "/projects" },
       { title: "Achievements", subtitle: "TROPHIES", url: "/achievements" },
@@ -286,7 +292,7 @@ function ModeProjects({ mode }: { mode: HeroMode }) {
                 style={{ filter: t.imgFilter, transform: "translateZ(0px)" }} />
 
               {/* Anamorphic Cursor-Revealed Image */}
-              <img src="/prem-image.png" alt="Prem Sai Surisetti" 
+              <img src={t.hoverImgSrc} alt="Prem Sai Surisetti" 
                 className="absolute top-0 left-0 w-full h-full object-cover object-top pointer-events-none transition-all duration-100 ease-out"
                 style={{ 
                   opacity: isHovered ? 1 : 0,

@@ -46,10 +46,10 @@ const themes: Record<HeroMode, AboutTheme> = {
     barBg:        "rgba(255,45,45,0.1)",
     barFill:      "linear-gradient(90deg,#ff2d2d,#cc0000)", barGlow: "0 0 10px rgba(255,45,45,0.35)",
     tagBg:        "rgba(255,45,45,0.08)", tagBorder: "rgba(255,45,45,0.25)", tagColor: "#ff2d2d",
-    imgSrc:       "/personal-image.png",
+    imgSrc:       "/personal-image.jpeg",
     imgFilter:    "brightness(1.1) contrast(1.1)",
     imgLabel:     "PREM SAI SURISETTI — WEB SLINGER OF CODE",
-    bio1:         "I am a Full Stack Developer weaving together", bio1Accent: "logic and scale",
+    bio1:         "I am the Founder of NoirKart, weaving together", bio1Accent: "logic and scale",
     bio2:         "In a world where digital experiences are the new frontier, I specialize in architecting high-performance web applications that serve as the connective tissue for modern enterprises. From the initial thread of a frontend concept to the robust web of a backend infrastructure, my mission is to deliver seamless, scalable solutions. Like a web-slinger protecting the neighborhood, I guard the integrity of every pixel and line of code, ensuring that every project I touch is built with the precision and reliability required for the weight of today's digital demands.",
     quote:        "\"With great power comes great responsibility.\"", quoteAuthor: "— Uncle Ben",
     glowShadow:   "0 0 40px rgba(255,45,45,0.4)",
@@ -64,10 +64,10 @@ const themes: Record<HeroMode, AboutTheme> = {
     barBg:        "rgba(80,0,0,0.4)",
     barFill:      "linear-gradient(90deg,#880000,#ff2200)", barGlow: "0 0 8px rgba(255,34,0,0.6)",
     tagBg:        "rgba(180,0,0,0.2)", tagBorder: "rgba(200,0,0,0.5)", tagColor: "#ff6666",
-    imgSrc:       "/personal-image.png",
+    imgSrc:       "/personal-image.jpeg",
     imgFilter:    "brightness(0.9) saturate(1.1)",
     imgLabel:     "PREM SAI SURISETTI — ENGINEER OF INTELLIGENT SYSTEMS",
-    bio1:         "I am a Full Stack Developer architecting", bio1Accent: "high-performance systems",
+    bio1:         "I am the Founder of NoirKart, engineering", bio1Accent: "high-performance systems",
     bio2:         "Leveraging Stark-level precision and nanotech-inspired efficiency, I engineer digital infrastructures that are as robust as a vibranium-titanium alloy. My approach to full-stack development is rooted in the belief that every line of code should be a piece of a larger, intelligent ecosystem. Whether I'm optimizing a React-driven heads-up display or architecting a massive Node.js server array, I focus on creating systems that are not just functional, but revolutionary. I don't just build websites; I build the future of the web, one module at a time.",
     quote:        "\"My armor was never a distraction. I am Iron Man.\"", quoteAuthor: "— Tony Stark",
     glowShadow:   "0 0 30px rgba(220,30,0,0.6)",
@@ -82,10 +82,10 @@ const themes: Record<HeroMode, AboutTheme> = {
     barBg:        "rgba(80,0,0,0.4)",
     barFill:      "linear-gradient(90deg,#7a0000,#ee1010)", barGlow: "0 0 7px rgba(220,20,0,0.6)",
     tagBg:        "rgba(150,0,0,0.45)", tagBorder: "rgba(255,250,250,1)", tagColor: "#ffffff",
-    imgSrc:       "/personal-image.png",
+    imgSrc:       "/personal-image.jpeg",
     imgFilter:    "brightness(0.85) contrast(1.1)",
     imgLabel:     "PREM SAI SURISETTI — THE MERC WITH A MOUSE",
-    bio1:         "I am a Full Stack Developer with", bio1Accent: "Maximum Efficiency,",
+    bio1:         "I am the Founder of NoirKart, working with", bio1Accent: "Maximum Efficiency,",
     bio2:         "Listen, I don't just 'code'—I go in with Maximum Effort and carve out digital masterpieces that make other developers cry in their chimichangas. Breaking the fourth wall of boring UI is my specialty, delivering full-stack apps that are leaner, faster, and cooler than anything else on the market. When I'm not optimizing a server's healing factor or cleaning up messy legacy code like a mercenary on a mission, I'm finding high-octane ways to sell web pages that actually convert. It's about being the best at what I do, and what I do is build scalable applications that kick butt.",
     quote:        "\"With great power comes great irresponsibility. Just kidding. Maximum effort.\"",
     quoteAuthor:  "— Deadpool",
@@ -101,10 +101,10 @@ const themes: Record<HeroMode, AboutTheme> = {
     barBg:        "rgba(50,40,0,0.5)",
     barFill:      "linear-gradient(90deg,#4a3800,#c89800)", barGlow: "0 0 7px rgba(220,160,0,0.5)",
     tagBg:        "rgba(80,60,0,0.3)", tagBorder: "rgba(180,140,0,0.4)", tagColor: "#fdc700",
-    imgSrc:       "/personal-image.png",
+    imgSrc:       "/personal-image.jpeg",
     imgFilter:    "brightness(0.8) contrast(1.2) grayscale(20%)",
     imgLabel:     "PREM SAI SURISETTI — THE DARK DEVELOPER",
-    bio1:         "I am a Full Stack Developer bringing", bio1Accent: "order to chaos,",
+    bio1:         "I am the Founder of NoirKart, bringing", bio1Accent: "order to chaos,",
     bio2:         "Operating from the shadows of complex logic, I architect secure and highly scalable digital environments that stand as fortresses of engineering excellence. My methodology is defined by an unwavering dedication to performance and security, ensuring that every application I build can withstand the toughest digital storms. Much like the guardian of Gotham, I am a silent protector of data integrity and user experience, building symbols of reliability that users can trust. From optimized database schemas to high-fidelity frontend interfaces, I bring a methodical, disciplined approach to the relentless pursuit of perfection.",
     quote:        "\"I am vengeance. I am the night. I am Batman.\"", quoteAuthor: "— Bruce Wayne",
     glowShadow:   "0 0 30px rgba(180,130,0,0.4)",
@@ -119,10 +119,10 @@ const themes: Record<HeroMode, AboutTheme> = {
     barBg:        "rgba(10,30,100,0.4)",
     barFill:      "linear-gradient(90deg,#002299,#4488ff)", barGlow: "0 0 7px rgba(60,120,255,0.5)",
     tagBg:        "rgba(10,30,110,0.35)", tagBorder: "rgba(40,100,240,0.4)", tagColor: "#ffc000",
-    imgSrc:       "/personal-image.png",
+    imgSrc:       "/personal-image.jpeg",
     imgFilter:    "brightness(1.0) saturate(1.2)",
     imgLabel:     "PREM SAI SURISETTI — FULL STACK POWERHOUSE",
-    bio1:         "I am a Full Stack Developer building", bio1Accent: "a better web,",
+    bio1:         "I am the Founder of NoirKart, building", bio1Accent: "a better web,",
     bio2:         "Driven by a commitment to truth in data and an unwavering belief in the power of modern engineering, I build applications that serve as a beacon for what is possible in the digital age. I possess the strength to lift entire server architectures and the vision to see through the most complex frontend challenges. My goal is to create a web that is as fast as a speeding bullet and as powerful as a locomotive, empowering people with tools that are both resilient and inspiring. I am a full-stack powerhouse dedicated to the relentless pursuit of excellence, fighting for a more efficient and impactful digital world.",
     quote:        "\"You will give the people of Earth an ideal to strive towards.\"", quoteAuthor: "— Jor-El",
     glowShadow:   "0 0 30px rgba(50,100,255,0.4)",
@@ -196,7 +196,7 @@ function ModeAbout({ mode }: { mode: HeroMode }) {
                  <div className="absolute w-2 h-2 rounded-full -left-[5px] top-1.5" style={{ background: t.accentColor, boxShadow: `0 0 10px ${t.accentColor}` }} />
                  <h4 className="text-white font-bold text-lg tracking-wide uppercase italic">KL UNIVERSITY, HYDERABAD</h4>
                  <p className="text-white/80 text-sm font-mono tracking-widest">B.TECH IN COMPUTER SCIENCE</p>
-                 <p className="text-sm font-mono tracking-widest mt-1" style={{ color: t.accentColor }}>CGPA: 9.58</p>
+                 <p className="text-sm font-mono tracking-widest mt-1" style={{ color: t.accentColor }}>CGPA: 9.64</p>
                </div>
 
                <div className="pt-4 mt-4" style={{ borderTop: `1px solid ${t.cardBorder}` }}>

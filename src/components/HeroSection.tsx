@@ -205,7 +205,7 @@ export default function HeroSection({ mode, onModeChange }: HeroProps) {
           className="mt-6 font-mono text-sm md:text-base lg:text-lg tracking-[0.3em] text-white uppercase text-center backdrop-blur-sm px-4 py-1 rounded-full border border-primary bg-primary/20 transition-all duration-500"
           style={{ boxShadow: "0 0 20px hsl(var(--primary) / 0.4)" }}
         >
-          Full Stack Developer
+          Founder of NoirKart
         </p>
       </div>
 
