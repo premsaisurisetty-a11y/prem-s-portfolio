@@ -3,6 +3,7 @@ import { Github, Linkedin } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HeroMode } from "@/pages/Index";
+import LinkedInBadge from "./LinkedInBadge";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -227,7 +228,7 @@ function ModeContact({ mode }: { mode: HeroMode }) {
 
   return (
     <section id="contact" className="relative py-20 px-6">
-      <div className="container mx-auto max-w-2xl">
+      <div className="container mx-auto max-w-5xl">
         <p className="text-center font-mono text-xs tracking-[0.35em] uppercase mb-4"
           style={{ color: t.dimColor }}>{t.subheader}</p>
         <h2 className="text-center text-4xl md:text-5xl font-bold text-white mb-10 tracking-tight"
@@ -235,66 +236,72 @@ function ModeContact({ mode }: { mode: HeroMode }) {
           {t.heading} <span style={{ color: t.accentColor }}>{t.headingAccent}</span>
         </h2>
 
-        <div className="relative rounded-2xl p-8"
-          style={{ background: t.formBg, border: `2px solid ${t.formBorder}`, boxShadow: t.formShadow, backdropFilter: "blur(28px)" }}>
-          {/* HUD corners */}
-          {["top-2 left-2","top-2 right-2","bottom-2 left-2","bottom-2 right-2"].map((pos, i) => (
-            <div key={i} className={`absolute ${pos} w-5 h-5`} style={{
-              borderTop:    i < 2  ? `2px solid ${t.cornerBorder}` : undefined,
-              borderBottom: i >= 2 ? `2px solid ${t.cornerBorder}` : undefined,
-              borderLeft:   i%2===0? `2px solid ${t.cornerBorder}` : undefined,
-              borderRight:  i%2===1? `2px solid ${t.cornerBorder}` : undefined,
-            }} />
-          ))}
+        <div className="grid lg:grid-cols-3 gap-8 items-start mb-12">
+          <div className="lg:col-span-2 relative rounded-2xl p-8"
+            style={{ background: t.formBg, border: `2px solid ${t.formBorder}`, boxShadow: t.formShadow, backdropFilter: "blur(28px)" }}>
+            {/* HUD corners */}
+            {["top-2 left-2","top-2 right-2","bottom-2 left-2","bottom-2 right-2"].map((pos, i) => (
+              <div key={i} className={`absolute ${pos} w-5 h-5`} style={{
+                borderTop:    i < 2  ? `2px solid ${t.cornerBorder}` : undefined,
+                borderBottom: i >= 2 ? `2px solid ${t.cornerBorder}` : undefined,
+                borderLeft:   i%2===0? `2px solid ${t.cornerBorder}` : undefined,
+                borderRight:  i%2===1? `2px solid ${t.cornerBorder}` : undefined,
+              }} />
+            ))}
 
-          {/* Status strip */}
-          <div className="flex items-center gap-2 mb-6 pb-4"
-            style={{ borderBottom: `1px solid ${t.formBorder}40` }}>
-            <div className="w-2 h-2 rounded-full animate-pulse"
-              style={{ background: t.accentColor, boxShadow: `0 0 6px ${t.accentColor}` }} />
-            <span className="font-mono text-xs tracking-widest" style={{ color: t.statusColor }}>
-              {t.statusText}
-            </span>
+            {/* Status strip */}
+            <div className="flex items-center gap-2 mb-6 pb-4"
+              style={{ borderBottom: `1px solid ${t.formBorder}40` }}>
+              <div className="w-2 h-2 rounded-full animate-pulse"
+                style={{ background: t.accentColor, boxShadow: `0 0 6px ${t.accentColor}` }} />
+              <span className="font-mono text-xs tracking-widest" style={{ color: t.statusColor }}>
+                {t.statusText}
+              </span>
+            </div>
+
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block font-mono text-xs mb-1" style={{ color: t.accentColor, letterSpacing: "0.14em" }}>YOUR NAME</label>
+                  <input type="text" name="name" required placeholder={t.namePlaceholder} className={fieldBase} style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
+                </div>
+                <div>
+                  <label className="block font-mono text-xs mb-1" style={{ color: t.accentColor, letterSpacing: "0.14em" }}>YOUR EMAIL</label>
+                  <input type="email" name="email" required placeholder={t.emailPlaceholder} className={fieldBase} style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
+                </div>
+              </div>
+              <div>
+                <label className="block font-mono text-xs mb-1" style={{ color: t.accentColor, letterSpacing: "0.14em" }}>MESSAGE</label>
+                <textarea rows={5} name="message" required placeholder={t.msgPlaceholder}
+                  className="w-full px-4 py-3 rounded-lg font-mono text-sm text-white placeholder:text-white/50 focus:outline-none resize-none transition-all duration-300"
+                  style={fieldStyle} onFocus={onFocus as never} onBlur={onBlur as never} />
+              </div>
+              <div className="pt-2">
+                <button type="submit"
+                  disabled={status === "sending"}
+                  className={`w-full py-4 font-bold tracking-[0.2em] uppercase rounded-lg transition-all duration-300 ${status === "sending" ? "opacity-50 cursor-not-allowed" : ""}`}
+                  style={{ background: t.btnBg, border: `1px solid ${t.btnBorder}`, boxShadow: t.btnShadow, color: t.btnText, letterSpacing: "0.22em" }}
+                  onMouseEnter={e => { if (status !== "sending") { (e.currentTarget as HTMLElement).style.background = t.btnHoverBg; (e.currentTarget as HTMLElement).style.boxShadow = t.btnHoverShadow; } }}
+                  onMouseLeave={e => { if (status !== "sending") { (e.currentTarget as HTMLElement).style.background = t.btnBg; (e.currentTarget as HTMLElement).style.boxShadow = t.btnShadow; } }}
+                >
+                  {status === "sending" ? "TRANSMITTING..." : status === "success" ? "SENT SUCCESSFULLY! — MISSION ACCOMPLISHED" : t.submitLabel}
+                </button>
+                {status === "error" && (
+                  <p className="mt-4 text-center font-mono text-xs p-3 rounded-lg border border-red-500/50 bg-red-500/10 text-red-400">
+                    ERROR: CHANNEL BLOCKED BY STARK SECURITY — PLEASE TRY AGAIN LATER.
+                  </p>
+                )}
+              </div>
+            </form>
           </div>
 
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label className="block font-mono text-xs mb-1" style={{ color: t.accentColor, letterSpacing: "0.14em" }}>YOUR NAME</label>
-                <input type="text" name="name" required placeholder={t.namePlaceholder} className={fieldBase} style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
-              </div>
-              <div>
-                <label className="block font-mono text-xs mb-1" style={{ color: t.accentColor, letterSpacing: "0.14em" }}>YOUR EMAIL</label>
-                <input type="email" name="email" required placeholder={t.emailPlaceholder} className={fieldBase} style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
-              </div>
-            </div>
-            <div>
-              <label className="block font-mono text-xs mb-1" style={{ color: t.accentColor, letterSpacing: "0.14em" }}>MESSAGE</label>
-              <textarea rows={5} name="message" required placeholder={t.msgPlaceholder}
-                className="w-full px-4 py-3 rounded-lg font-mono text-sm text-white placeholder:text-white/50 focus:outline-none resize-none transition-all duration-300"
-                style={fieldStyle} onFocus={onFocus as never} onBlur={onBlur as never} />
-            </div>
-            <div className="pt-2">
-              <button type="submit"
-                disabled={status === "sending"}
-                className={`w-full py-4 font-bold tracking-[0.2em] uppercase rounded-lg transition-all duration-300 ${status === "sending" ? "opacity-50 cursor-not-allowed" : ""}`}
-                style={{ background: t.btnBg, border: `1px solid ${t.btnBorder}`, boxShadow: t.btnShadow, color: t.btnText, letterSpacing: "0.22em" }}
-                onMouseEnter={e => { if (status !== "sending") { (e.currentTarget as HTMLElement).style.background = t.btnHoverBg; (e.currentTarget as HTMLElement).style.boxShadow = t.btnHoverShadow; } }}
-                onMouseLeave={e => { if (status !== "sending") { (e.currentTarget as HTMLElement).style.background = t.btnBg; (e.currentTarget as HTMLElement).style.boxShadow = t.btnShadow; } }}
-              >
-                {status === "sending" ? "TRANSMITTING..." : status === "success" ? "SENT SUCCESSFULLY! — MISSION ACCOMPLISHED" : t.submitLabel}
-              </button>
-              {status === "error" && (
-                <p className="mt-4 text-center font-mono text-xs p-3 rounded-lg border border-red-500/50 bg-red-500/10 text-red-400">
-                  ERROR: CHANNEL BLOCKED BY STARK SECURITY — PLEASE TRY AGAIN LATER.
-                </p>
-              )}
-            </div>
-          </form>
+          <div className="lg:col-span-1 flex w-full">
+            <LinkedInBadge mode={mode} />
+          </div>
         </div>
 
         {/* Social links */}
-        <div className="mt-10 flex flex-col items-center gap-6 text-center">
+        <div className="mt-10 flex flex-col items-center gap-6 text-center max-w-2xl mx-auto">
           <div className="flex justify-center gap-8 items-center mb-6">
             {[
               { label: "GitHub",   href: "https://github.com/premsaisurisetty-a11y", icon: Github },
