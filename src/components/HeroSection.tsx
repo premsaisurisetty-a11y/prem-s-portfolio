@@ -216,7 +216,7 @@ export default function HeroSection({ mode, onModeChange }: HeroProps) {
       >
         {/* Base Prem Image */}
         <img
-          src="/prem-image.png"
+          src="/prem-image.jpeg"
           alt="Prem"
           className="absolute inset-0 w-full h-full object-cover object-center filter drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
         />
