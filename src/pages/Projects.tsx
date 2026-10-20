@@ -11,6 +11,15 @@ import SupermanBackground from "@/components/SupermanBackground";
 
 const projects = [
   {
+    title: "FantasyScore AI",
+    tagline: "Real-Time Fantasy Predictor & Match Simulator",
+    image: "/fantasyscore-bg.png",
+    url: "https://fantasy-league-predictor.vercel.app/",
+    github: "https://github.com/premsaisurisetty-a11y/fantasy-league-predictor",
+    context: "FantasyScore AI is a state-of-the-art machine learning predictive engine and live match simulator engineered for fantasy cricket intelligence. Powered by a high-throughput LightGBM regression pipeline trained on extensive historical IPL match records and multi-dimensional player baselines, it achieves sub-5ms real-time inference latency. The platform integrates an in-play ball-by-ball simulator, algorithmic squad optimizer, interactive what-if scenarios, and comprehensive exploratory data analysis reports.",
+    features: ["LightGBM ML Pipeline", "Live In-Play Match Simulator", "Algorithmic Squad Optimizer", "Sub-5ms Real-Time Inference"],
+  },
+  {
     title: "NoirKart",
     tagline: "Premium Curated E-Commerce & Deals Platform",
     image: "/noirkart-bg.png",
